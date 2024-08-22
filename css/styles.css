@@ -1,0 +1,151 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --medium-dark-blue: hsl(213, 16%, 29%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --orange: hsl(25, 97%, 53%);
+    --text-font: "Overpass", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--text-font);
+    background-color: var(--very-dark-blue);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+    height: auto;
+    background-color: var(--dark-blue);
+    border-radius: 40px;
+    padding: 2em;
+    gap: 20px;
+}
+
+.icon-star {
+    width: 7%;
+    background-color: var(--medium-dark-blue);
+    border-radius: 50px;
+    padding: 1em;
+}
+
+.title {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 30px;
+    margin: 1em auto 0.3em 0;
+}
+
+.text {
+    color: var(--light-grey);
+    font-size: 15px;
+    line-height: 150%;
+}
+
+.rating-buttons {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    margin: auto 0;
+
+}
+
+.each-button {
+    background-color: var(--medium-dark-blue);
+    color: var(--light-grey);
+    padding: 6%;
+    height: 25%;
+    border-radius: 50%;
+    ;
+}
+
+.each-button_hover:hover {
+    background-color: var(--orange);
+    color: var(--very-dark-blue);
+    font-weight: bold;
+}
+
+.selected {
+    background-color: var(--white);
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+.submit-button {
+    width: 100%;
+    margin: auto auto 0;
+    text-align: center;
+    padding: 1em;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: 700;
+    background-color: var(--orange);
+    color: var(--dark-blue);
+}
+
+.submit-button:hover {
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 11px;
+    color: var(--light-grey);
+    text-align: center;
+    position: absolute;
+    bottom: 1%;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+.second-container {
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+    gap: 40px;
+}
+
+.cell-phone {
+    width: 50%;
+}
+
+.selected-rating {
+    font-size: 1.2em;
+    background-color: var(--medium-dark-blue);
+    color: var(--orange);
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.thanks-message {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 50%;
+    }
+
+    .title {
+        margin: 1.2em auto 0.3em 0;
+    }
+}
+
+@media screen and (max-width: 435px) {
+    .selected-rating {
+        font-size: 0.9em;
+    }
+}
